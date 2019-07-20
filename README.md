@@ -1,1 +1,7 @@
 # Anomaly Credit Card Fraud Detection
+
+Anomaly detection is different from normal classification problem in the sense that in anomaly detection, the dataset is highly skewed, since the anomalous observations are so rare. Unlike normal classification problem, machine learning classification models have sufficient data to  learn about the patterns of positive and negative class, on top of that, there is usually no expected pattern of anomalous observations, which add to the diificuties of detecting anomalies.
+
+In the notebook, we employ autoencoder approach to for the credit card fraud detection task, the idea behind this apporaoch is that we train our autoencoder to reconstruct the input data by feeding the model the normal data. Hopefully, after training, the loss will be small when the data we input into the trained autoencoder model are normal and large when the inputs are fraud data. So setting some threshold value, we may detect the frauds by checking whether ths loss is higher the threshold or not.
+
+We also explor different evaluation metrics in thhe notebook since the accuracy is not a proper way to evaluate the performance of the model as the dataset is highly imbalanced, one can simply predict everything is normal and achieves very high accuracy.
